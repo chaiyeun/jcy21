@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body{margin:0}
+h1,h2,h3,h4,h5,h6{margin:0;}
+ol,ul{list-style:none; margin:0; padding: 0;}
+a{text-decoration: none; color:inherit}
+img{width: 100%;}
+.hd{font-size: 0; text-indent: -999px; width: 0; height: 0; overflow: hidden;}
+.red{background-color:pink;}
+.blue{background-color:skyblue;}
+.green{background-color:lightgreen;}
+.yellow{background-color:yellow;}
+.grey{background-color:lightgrey;}
+
+
+.inner{margin:0 auto; width: 1180px;}
+
+#container{}
+
+header{border: 1px solid #000;}
+.header_inner{display: flex; justify-content: space-between; padding:10px 20px; box-sizing: border-box; position: relative; align-items: center;}
+  .logo{width: 100px; height: 50px; text-align: center; line-height: 50px;}
+  .gnb{display:flex;}
+  .gnb>li{padding: 5px 10px;}
+
+.mob_icon{display: none; width: 30px; height: 20px; position: absolute; right: 20px; top: 20px; z-index:5;}
+.mob_icon>span{display:block; width: 100%; height: 2px; background-color:black; position: absolute; left:0;}
+.mob_icon>span:nth-child(1){top: 0;}
+.mob_icon>span:nth-child(2){top: 50%;}
+.mob_icon>span:nth-child(3){top: 100%;}
+
+.main{border: 1px solid #000;}
+.slide_inner{height: 300px;}
+
+section{padding: 20px 10px; box-sizing: border-box; border: 1px solid #000;}
+.box_wrap{display: flex; height: 300px;}
+.box_wrap>div{margin: 1%; width: 23%; }
+
+footer{border: 1px solid #000;}
+.ft_inner{display: flex; justify-content: space-between; padding: 10px 20px; box-sizing: border-box;}
+.ft_inner>div{}
+  .ft_logo{width: 100px; height: 50px;}
+  .ft_conts{width: 300px; height: 100px;}
+
+@media (max-width:1180px){
+  .inner{width: 90%;}
+  .box_wrap{flex-wrap: wrap;}
+  .box_wrap>div{margin: 1%; width: 31.33333%;}
+  .box3{display: none;}
+}
+@media (max-width:768px){
+  .inner{width: 100%;}
+  .header_inner{flex-direction: column; align-items: center; padding: 10px 20px; box-sizing: border-box;}
+  header .gnb{margin-top: 20px; text-align: center;}
+  .box_wrap>div{margin: 1%; width: 48%;}
+  .box3{display: block;}
+  .box2,.box4{display: none;}
+
+  .ft_inner{flex-direction: column;}
+  .ft_logo{margin-bottom: 20px;}
+}
+@media (max-width:486px){
+  .mob_icon{display: block;}
+  .gnb{position: absolute; top: 50px; left: 0; width: 100%; display: none; background-color:black; color:white;}
+  .gnb.on{display:flex; flex-wrap:wrap;}
+  .gnb.on>li{width: 45%;}
+  .box_wrap{height: auto;}
+  .box_wrap>div{margin: 1%; width: 99%; height: 200px;}
+  .box2,.box4{display: block;}
+  .ft_conts{display:none;}
+}
