@@ -256,6 +256,7 @@ background-color: #000; color:#fff;
   .best.on{flex-direction: column;}
   .best>li{margin-left: 0; margin-bottom: 20px;}
   .best>li:last-child{display: block;}
+  .review_txt p br:first-child{display: block;}
 
   .f_right ul,.f_right p{display: none;}
   .f_right address{margin-top: 50px;}
