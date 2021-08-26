@@ -155,7 +155,7 @@ nav.on{display: block;}
     .best_txt>p>span{font-size: 13px; color:#999;}
     .best_txt>input[type="image"]{width: 40px; height: 40px;}
     /* review */
-  .review{width: 100%; display: flex; justify-content: space-between; display: none;}
+  .review{width: 100%; display: flex; justify-content: space-between; display: none; box-sizing: border-box;}
   .review.on{display: flex;}
     .review_txt{width: 280px; padding:30px; }
     .review_txt>h3{padding-bottom:10px;}
