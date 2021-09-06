@@ -8,6 +8,10 @@ $(document).ready(function(){
   $('.sub').stop().slideUp();
 });
 
+  $('.mini').click(function(){
+    $('.gnb').toggleClass('on')
+  })
+
 let num=0;
 setInterval(function(){
   if(num<2){
@@ -18,7 +22,7 @@ setInterval(function(){
   $('.room_box').stop().animate({'margin-left':-100*num+'%'},600);
   },3500);
 
-  $('.reserve').animate({'top':'-144%','opacity':'1'},700,'linear');
+  $('.reserv_box').animate({'top':'80%','opacity':'1'},700,'linear');
 
   let $rewardsOffset=$('.rewards').offset().top -330;
 

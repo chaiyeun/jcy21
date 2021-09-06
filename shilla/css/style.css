@@ -14,7 +14,7 @@ img{width: 100%; vertical-align:top;}
 .inner{width: 80%; margin:0 auto;}
 
 header{}
-.top{background-color:#473932; padding:10px; z-index:10;}
+.top{background-color:#473932; padding:10px;}
 .t_menu{text-align:right; padding-right:40px;}
 .t_menu>a{color:white; padding:10px;font-size:14px;}
 nav{width: 100%; background-color:rgba(255, 255, 255, 0.8);}
@@ -31,6 +31,12 @@ nav{width: 100%; background-color:rgba(255, 255, 255, 0.8);}
 .sub>li{padding:5px 0;}
 .nav_bg{width: 100%; height:230px; background-color: #fff; position:absolute; top:3%; margin-top:20px; display:none; z-index:-1;}
 
+.mini{width: 30px; height: 17px; position: absolute; top:30px; right:30px; display: none;}
+.mini>span{width: 100%; height: 2px; background-color:black; position: absolute;}
+.mini>span:nth-child(1){top:0;}
+.mini>span:nth-child(2){top:50%;}
+.mini>span:nth-child(3){top:100%;}
+
 .banner{width: 100%; overflow:hidden; margin-top:-120px; z-index:-2; }
 .banner_slide{width: 300%; display:flex; animation:slide 12s linear infinite; }
 .banner_slide>img{width: 33.3333%; z-index:-5; }
@@ -44,16 +50,18 @@ nav{width: 100%; background-color:rgba(255, 255, 255, 0.8);}
   100%{margin-left:0%}
 }
 
-.reserv_box{position: relative; height:80px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
-.reserve{background-color:rgba(90, 67, 60, 0.9); padding:30px 20px; position: absolute; top:-80%; left:50%; transform: translateX(-50%); display:flex; align-items:center;}
-.info{display:flex; margin:0 60px;}
-.info p{color:white; font-size:20px; margin:0;}
-.info div{margin-right:30px; text-align: center;}
+.reserv_box{position: absolute;  font-family: 'Noto Sans KR', sans-serif; left:50%; top:90%; transform: translateX(-50%); background-color:rgba(0,0,0,0.5); padding:20px 30px;}
+.reserve{display:flex; align-items:center; justify-content: center;}
+.info{display:flex;}
+.info p{color:white; font-size:20px; margin:0 0 10px 0; font-weight: 500;}
+.info div{margin-right:30px;}
+.info input{border: none; padding: 5px 10px;}
+.info select{border: none; padding: 5px 10px; box-sizing:content-box}
 .date,.people{display: flex;}
 select{width: 50px; height: 20px;}
 .search{width: 120px; height: 45px;background-color: #fff; border:none; border-radius: 0%; font-size:17px; margin-right:20px;}
 
-.list{display:flex; flex-wrap:wrap; justify-content: center; margin-bottom: 80px;}
+.list{display:flex; flex-wrap:wrap; justify-content: center; margin:80px 0;}
 .list>div{ width: 22%; height: 410px; margin-right:1%;}
 .list>div:last-child{margin-right:0;}
 .list>div:hover .black{background:none;}
@@ -68,14 +76,14 @@ select{width: 50px; height: 20px;}
 
 .rewards{background-color:#EFEFEF; width: 100%; display:flex; justify-content: space-between; padding:1% 2%; box-sizing: border-box; align-items:center;}
 
-.card_wrap{position: relative; width: 23%; height: 100%;}
+.card_wrap{position: relative; width: 23%; height: 100%; overflow: hidden;}
 .text_s{position: absolute; top:3%; left:-20%; font-size:27px; color:rgb(230, 196, 4); font-weight: bold;}
 .text_s::after{content:''; display:inline-block; width:100px; height: 2px; background-color:rgb(230, 196, 4); margin-bottom:10px; margin-left:10px;}
 .text_c{position: absolute; bottom:9%; right:-20%; font-size:27px; color:rgb(230, 196, 4); font-weight: bold;}
 .text_c::before{content:''; display:inline-block; width:100px; height: 2px; background-color:rgb(230, 196, 4); margin-bottom:3px; margin-right:10px;}
 
-.title{padding-left:3%; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
-.title>h3{font-size:33px; color:rgb(112, 13, 83)}
+.title{padding-left:5%; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
+.title>h3{font-size:33px; color:rgb(112, 13, 83);}
 .title>p{margin-left:5px; color:rgb(92, 92, 92)}
 .subt_wrap{margin-left:-30px; font-family: 'Noto Sans KR', sans-serif;}
 .sub_txt{ float:left; margin:0 15px; text-align:center;}
@@ -103,30 +111,32 @@ select{width: 50px; height: 20px;}
 .je,.mo,.st{display:none;}
 
 .img_wrap{width: 100%; position: relative; margin:0 auto;}
-  .name_box{background-color:rgba(0, 0, 0, 0.6); text-align:center; position: absolute; top:85%; left:0; color:white; width: 100%; padding: 10px 0;}
-.room_list{margin:0 auto; display:flex; padding:35px 0; background-color: #fff; width: 100%; justify-content:center; font-family: 'PT Serif', serif;}
+  .name_box{background-color:rgba(0, 0, 0, 0.6); text-align:center; position: absolute; bottom:3%; left:0; color:white; width: 100%; padding: 10px 0;}
+.room_list{margin:0 auto; display:flex; padding:35px 0; background-color: #fff; width: 100%; justify-content:center; font-family: 'PT Serif', serif; box-sizing: border-box;}
 .room_list>li{margin:0 30px; text-align:center;font-size:17px;}
 .shadow{width: 100%; height: 100%; background-color: #c9c281; position: absolute; top:-8%; left:-5%; z-index:-5;}
 .active{color:rgb(45, 123, 143)}
 
 .bg{width: 100%; height: 60%; background-color: #4E413B; position: absolute; top:50%; z-index:-10;}
 
-footer{display:flex;justify-content:space-around; align-items:center; padding:100px 30px 50px 30px;}
-.f_logo>img{width: 230px;}
+footer{display:flex;justify-content:space-around; align-items:center; padding:100px 0 50px 0; box-sizing: border-box;}
+.f_logo>h3{background-image:url(../img/logo_left.png);background-repeat: no-repeat; background-size:contain; width: 200px; height: 70px;}
 
 .shotel img{width: 120px; margin:15px 15px;}
 .footer_r>p{font-size:12px; color:rgb(54, 54, 54);  line-height:19px;}
 
 @media (max-width:1180px){
+  .reserv_box{position: unset; transform: translateX(0); width: 100%; background-color:#4E413B; padding:20px 0;}
+  .title{padding-left:3%;}
   .title>h3{font-size:25px}
   .title>p{font-size:15px;}
   .sub_txt i{font-size:25px;}
   .sub_txt p{font-size:15px;}
+
+  .shotel img{width: 100px;}
 }
 
 @media (max-width:895px){
-  .reserv_box{position: unset; height: auto; margin:3% 2%;}
-  .reserve{position: unset; transform: translateX(0); justify-content: space-around;}
   .info{margin:0 10px;}
   .info p{font-size:17px; margin-bottom:10px;}
   .info input{width: 110px;}
@@ -156,16 +166,58 @@ footer{display:flex;justify-content:space-around; align-items:center; padding:10
   .sub_t{top:65%;}
   .sub_t>p{font-size:19px;}
   .sub_t>a{font-size:12px;}
- 
+
+  .room_img{position: unset;}
+  .room_wrap{ width: 100%; position:unset}
+  .room{margin-bottom:20px;}
+  .shadow{display: none;}
+  .bg{display: none;}
+  .shotel{display: none;}
+  .name_box{font-size:12px}
+
+  footer{background-color:black; padding:50px 30px; margin: 0; width: 100%;}
+  .f_logo>h3{background-image:url(../img/logo_left_w.png); width: 200px; height: 70px;}
+  .footer_r>p{color:rgb(216, 216, 216)}
 }
 @media (max-width:605px){
-  .date,.people{display:block;}
-  .info>div{width: 150px;}
-  
+  .top{display: none;}
+  .banner{margin-top:0;}
+  .navi{display: block;}
+  .mini{display: block;}
+  .gnb{display: none;}
+  .gnb.on{display: flex; padding: 20px 0;}
 
+  .reserv_box{display: none;}
+  .list{margin:30px 0}
   .rewards{padding:4% 10% 4% 7%;}
   .card_wrap{display: none;}
   .text_s,.text_c{display: none;}
   .sub_txt i{color:goldenrod}
 
+  .room_list>li{font-size:15px; margin:0 20px; }
+
+  .footer_r p{font-size:10px;}
+}
+
+@media (max-width:486px){
+  .list>div{ width: 46%; height: 380px; margin:2%;}
+  .list>div:last-child{margin-right:2%;}
+
+  .rewards{padding:5% 0;}
+  .subt_wrap{margin-right:15px;}
+  .title>h3{font-size:17px}
+  .title>p{font-size:10px; }
+  .sub_txt i{font-size:17px;}
+  .sub_txt p{font-size:10px;}
+
+  .offer{font-size:20px; margin-left:10px;}
+  .offer_list>div{margin:3%; width: 95%;}
+
+  .room_wrap{ width: 100%; }
+  .room_list{padding:20px; }
+  .room_list>li{font-size:7px; margin:0 15px; }
+
+  footer{padding:30px}
+  .f_logo>h3{width: 130px; height: 50px;}
+  .footer_r p{font-size:3px; line-height:15px;}
 }
