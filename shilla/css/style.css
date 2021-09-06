@@ -215,9 +215,9 @@ footer{display:flex;justify-content:space-around; align-items:center; padding:10
 
   .room_wrap{ width: 100%; }
   .room_list{padding:20px; }
-  .room_list>li{font-size:7px; margin:0 15px; }
+  .room_list>li{font-size:10px; margin:0 15px; }
 
   footer{padding:30px}
   .f_logo>h3{width: 130px; height: 50px;}
-  .footer_r p{font-size:3px; line-height:15px;}
+  .footer_r p{font-size:7px; line-height:15px;}
 }
