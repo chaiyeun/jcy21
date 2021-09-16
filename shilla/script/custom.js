@@ -9,7 +9,12 @@ $(document).ready(function(){
 });
 
   $('.mini').click(function(){
-    $('.gnb').toggleClass('on')
+    $('.gnb').toggleClass('on');
+    $('.miniD').removeClass('on');
+  })
+  $('.navi>i').click(function(){
+    $('.miniD').toggleClass('on');
+    $('.gnb').removeClass('on');
   })
 
 let num=0;
@@ -24,12 +29,36 @@ setInterval(function(){
 
   $('.reserv_box').animate({'top':'80%','opacity':'1'},700,'linear');
 
-  let $rewardsOffset=$('.rewards').offset().top -330;
+  let $rewardsOffset=$('.rewards').offset().top -400;
 
   $(window).scroll(function(){
    if($(this).scrollTop()>$rewardsOffset){
-     $('.text_s').animate({'left':0},1000,'linear');
-     $('.text_c').animate({'right':'8%'},1000,'linear');
+     $('.card_wrap').animate({'left':0},1000,'swing');
+    };
+  });
+
+  let $merOffset=$('.for_me').offset().top -500;
+  $(window).scroll(function(){
+   if($(this).scrollTop()>$merOffset){
+     $('.for_me').find('.list_t').animate({'top':0},700,'linear');
+    };
+  });
+  let $suOffset=$('.summer').offset().top -500;
+  $(window).scroll(function(){
+   if($(this).scrollTop()>$suOffset){
+    $('.summer').find('.list_t').animate({'top':0},700,'linear');
+    };
+  });
+  let $supOffset=$('.suprise').offset().top -500;
+  $(window).scroll(function(){
+   if($(this).scrollTop()>$supOffset){
+    $('.suprise').find('.list_t').animate({'top':0},700,'linear')
+    };
+  });
+  let $dearOffset=$('.dear').offset().top -500;
+  $(window).scroll(function(){
+   if($(this).scrollTop()>$dearOffset){
+     $('.dear').find('.list_t').animate({'top':0},700,'linear');
     };
   });
 
@@ -58,4 +87,6 @@ setInterval(function(){
     $('.se,.mo,.je').css('display','none');
     $('.room_list>li:nth-child(1),.room_list>li:nth-child(3),.room_list>li:nth-child(2)').removeClass('active');
   });
+
+
 })
