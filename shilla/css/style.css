@@ -31,13 +31,13 @@ nav{width: 100%; background-color:rgba(255, 255, 255, 0.8);}
 .sub>li{padding:5px 0;}
 .nav_bg{width: 100%; height:230px; background-color: #fff; position:absolute; top:3%; margin-top:20px; display:none; z-index: -1;}
 
-.miniD{display: flex; justify-content: space-between; display: none; }
-.miniD>.date{display: flex; background-color:black; color:white; align-items: center; padding: 10px; flex:4; justify-content: center;}
+.miniD{display: flex; justify-content: space-between; display: none;}
+.miniD>.date{display: flex; background-color:rgb(32, 25, 94); color:white; align-items: center; padding: 10px; flex:4; justify-content: center;}
 .miniD.on{display: flex;}
 .miniD>.date::after{display: none;}
 .miniD>.date p{margin:0 0 5px 0; font-size:13px;}
 .miniD>.date input{background:none; border:1px solid gray; color:white; padding:5px; width:75%; font-size:10px;}
-.minis{background-color:silver; flex:1; text-align: center;}
+.minis{background-color:rgb(139, 201, 219); flex:1; text-align: center;}
 .miniD a{font-size:20px; height: 100%; background:none; line-height:70px; color:ivory}
 
 .navi>i{position: absolute; right:90px; top:29px; font-size:23px; display: none;}
@@ -129,7 +129,7 @@ select{width: 50px; height: 20px;}
 .bg{width: 100%; height: 60%; background-color: #4E413B; position: absolute; top:50%; z-index:-10;}
 
 footer{display:flex;justify-content:space-around; align-items:center; padding:100px 0 50px 0; box-sizing: border-box;}
-.f_logo>h3{background-image:url(../img/logo_left.png);background-repeat: no-repeat; background-size:contain; width: 200px; height: 70px;}
+.f_logo>h3{background-image:url(../img/logo_left.png);background-repeat: no-repeat; background-size:contain; width: 200px; height: 70px; text-indent:-999px; overflow: hidden;}
 
 .shotel img{width: 120px; margin:15px 15px;}
 .footer_r>p{font-size:12px; color:rgb(54, 54, 54);  line-height:19px;}
@@ -172,12 +172,19 @@ footer{display:flex;justify-content:space-around; align-items:center; padding:10
   .logo img{width: 150px; margin-left:30px;}
   .top{display: none;}
   .banner{margin-top:0;}
+  
   .navi{display: block; width: 100%;}
   .mini{display: block; margin-right:20px;}
-  .gnb{display: none; font-size:15px; background-color: black; color:white; justify-content:center;}
-  .sub{font-size:13px;}
-  .nav_bg{background-color:black; height:170px; top:11%}
-  .gnb.on{display: flex; padding: 15px 0;}
+  .close{width:30px;height:30px;position:absolute; top:3%; right:10%; }
+  .close span{display:block; height: 2px;width:100%; background-color:#fff; position:absolute; top:50%; left:50%; transform-origin:center center;}
+  .close span:first-child{transform:translate(-50%,-50%) rotate(45deg);}
+  .close span:last-child{transform:translate(-50%,-50%) rotate(-45deg);}
+
+  .gnb{font-size:17px; background-color: black; color:white; position: fixed; top:0; right:0; height: 100vh; padding:10% 5% 0 5%; display:none; z-index:998;}
+  .gnb.on{display:block;}
+  .gnb>li{margin:20% 0; font-weight:normal;}
+  .sub{font-size:15px; position: unset; background:none;}
+  .nav_bg{display: none;}
   .sub a:hover {color:khaki;}
   .gnb>li:hover>a{color:khaki;}
 
@@ -222,10 +229,6 @@ footer{display:flex;justify-content:space-around; align-items:center; padding:10
 
   .logo img{margin-left:10px;}
   .navi>i{display: block;}
-  .gnb.on{padding:10px 0;}
-  .gnb>li{font-size:13px;}
-  .gnb li{width: 100px;}
-  .sub>li{font-size:10px}
   .reserv_box{display: none;}
 
   .rewards{padding:5% 0;}

@@ -1,21 +1,21 @@
 $(document).ready(function(){
- $('.gnb>li').mouseover(function(){
-  $('.nav_bg').stop().slideDown(300);
-  $('.sub').stop().slideDown();
- });
- $('.gnb>li').mouseout(function(){
-  $('.nav_bg').stop().slideUp(600);
-  $('.sub').stop().slideUp();
-});
+//  $('.gnb>li').mouseover(function(){
+//   $('.nav_bg').stop().slideDown(300);
+//   $('.sub').stop().slideDown();
+//  });
+//  $('.gnb>li').mouseout(function(){
+//   $('.nav_bg').stop().slideUp(600);
+//   $('.sub').stop().slideUp();
+// });
 
-  $('.mini').click(function(){
-    $('.gnb').toggleClass('on');
-    $('.miniD').removeClass('on');
-  })
-  $('.navi>i').click(function(){
-    $('.miniD').toggleClass('on');
-    $('.gnb').removeClass('on');
-  })
+  // $('.mini').click(function(){
+  //   $('.gnb').toggleClass('on');
+  //   $('.miniD').removeClass('on');
+  // })
+  // $('.navi>i').click(function(){
+  //   $('.miniD').toggleClass('on');
+  //   $('.gnb').removeClass('on');
+  // })
 
 let num=0;
 setInterval(function(){
@@ -87,6 +87,47 @@ setInterval(function(){
     $('.se,.mo,.je').css('display','none');
     $('.room_list>li:nth-child(1),.room_list>li:nth-child(3),.room_list>li:nth-child(2)').removeClass('active');
   });
+
+  $(window).resize(function(){
+    let win=$(this),
+    winWid=win.width();
+
+    if(winWid<=768){
+      $('.fool').attr('src','img/s_banner'+1+'.png');
+      $('.sfull').attr('src','img/s_banner'+2+'.png');
+      $('.jout').attr('src','img/s_banner'+3+'.png');
+      $('.mini').click(function(){
+        $('.gnb').toggleClass('on');
+        $('.miniD').removeClass('on');
+      });
+      $('.navi>i').click(function(){
+        $('.miniD').toggleClass('on');
+        $('.gnb').removeClass('on');
+      });
+      $('.close').click(function(){
+        $('.gnb').removeClass('on')
+      });
+      $('.gnb>li').mouseover(function(){
+        $(this).children('.sub').stop().slideDown(500);
+       });
+       $('.gnb>li').mouseout(function(){
+        $(this).children('.sub').stop().slideUp();
+      });
+    }else{
+      $('.fool').attr('src','img/adultfool.jpg');
+      $('.sfull').attr('src','img/seoul_hotel_full.jpg');
+      $('.jout').attr('src','img/maxresdefault.jpg');
+      $('.gnb>li').mouseover(function(){
+        $('.nav_bg').stop().slideDown(400);
+        $('.sub').stop().slideDown();
+       });
+       $('.gnb>li').mouseout(function(){
+        $('.nav_bg').stop().slideUp(600);
+        $('.sub').stop().slideUp();
+      });
+    }
+
+  }).resize()
 
 
 })
