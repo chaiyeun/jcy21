@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* font-family: 'Unna', serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+/* font-family: 'Judson', serif; */
+
+/* 한글 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+/* font-family: 'Gowun Batang', serif; */
+
+body{margin: 0;}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+ul,ol{list-style:none; margin: 0; padding: 0;}
+a{text-decoration:none; color:inherit}
+
+header{background: #000; position:fixed; width: 100%;}
+  .gnb{display:flex; justify-content: center;}
+  .gnb>li{color:white; margin:15px 40px;}
+
+#intro{height: 100vh; padding-top:4%; box-sizing: border-box; font-style: italic;}
+#intro>h1{ font-family: 'Judson', serif;}
+#intro img{width: 100%;}
+
+#introduce{height: 100vh; padding-top: 4%; box-sizing: border-box;}
+#introduce>img{width: 70%;}
+
+#web{height: 200vh; padding-top: 4%; box-sizing: border-box; width: 85%; margin:0 auto; font-family: 'Gowun Batang', serif; font-weight: bold;}
+/* #web img{margin:10px} */
+.shilla{height: 100vh;}
+.selecto{height: 100vh;}
+  .image{display:flex; align-items: center; text-align: center; justify-content:space-between}
+  .image p{border-bottom: 2px solid goldenrod; display:inline-block; padding: 5px;}
+  .full{width: 60%;}
+  .concept{width: 32%;}
+  .full img{width:100%; }
+  .concept img{width: 100%; display: block;}
+
+#design{height: 100vh; padding-top: 4%; box-sizing: border-box; width: 85%; margin:0 auto;}
+#design>h1{margin-bottom:30px;}
+.box_wrap{display: flex; justify-content: space-between;}
+.box_wrap img{width: 100%;}
+  .photo{flex:1;}
+  .photo img{width: 60%;}
+    .box1,.box2{display: flex;}
+  .ill{flex:1;}
+  .ill_img{display: flex;}
+  .ill_img>div{flex:1;}
